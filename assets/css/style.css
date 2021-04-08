@@ -37,5 +37,6 @@ h1 {
 img {
   width: 100px;
   position: relative;
-  right: 500px;
+  right: -550px;
+  top: -45px;
 }
