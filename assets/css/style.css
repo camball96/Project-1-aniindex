@@ -1,0 +1,23 @@
+body{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgb(37, 33, 33);
+    color: green;
+}
+h1{
+    font-size: 100px;
+
+}
+.search-btn{
+    color:green;
+
+}
+.search{
+    width: 300px;
+}
+img{
+    width: 100px;
+    position: absolute;
+    right: 500px;
+}
