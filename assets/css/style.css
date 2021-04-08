@@ -1,23 +1,41 @@
-body{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    background-color: rgb(37, 33, 33);
-    color: green;
+:root {
+  --darkGrey: rgb(37, 33, 33);
+  --green: green;
 }
-h1{
-    font-size: 100px;
 
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
-.search-btn{
-    color:green;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-.search{
-    width: 300px;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darkGrey);
+  color: var(--green);
 }
-img{
-    width: 100px;
-    position: absolute;
-    right: 500px;
+
+h1 {
+  font-size: 100px;
+}
+.search-btn {
+  color: var(--green);
+}
+
+.search {
+  width: 300px;
+}
+
+img {
+  width: 100px;
+  position: relative;
+  right: 500px;
 }
