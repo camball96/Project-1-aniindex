@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+
+ <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime</title>
     <link href="./assets/css/style.css" rel="stylesheet">
 
 </head>
-<body>
     <div class="png">
         <img src="" alt="">
     </div>
@@ -18,19 +21,34 @@
             <h1>anIIndex</h1>
             <p>The best anime search out there</p>
         </div>
+
+        <body>
+            <div class="container"></div>
+                <div class="row">
+                    <form id="search_btn" class="col s12">
+                    <div class="row">
+                        <div class="input-field col s6">
+                        <input placeholder="Placeholder" name="search" id="search" type="text" class="validate">
+                        <label for="search">Search</label>
+                    </div>
+                </div>
+            </div>             
+
         <div class="search-box">
             <input type="text" class="search">
         </div>
 
         <div class="search-btn">
-            <button class= "search-btn" id="search-btn">Search</button>
+            <button oneclick= "searchAnime()" class= "search-btn" id="search-btn">Search</button>
             <button class= "search-btn" id="random-btn">New Anime</button>
             
         </div> 
         <div class="aniemshit">anime shit here</div>   
     </section>
 
-    
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
