@@ -23,15 +23,21 @@
         </div>
 
 <body>
-    <div class="container"></div>
+    <div class = "container">
         <div class="row">
-            <div class="row">
-                <div class="input-field col s6">
-                    <input placeholder="Placeholder" name="search" id="search" type="text" class="validate">
+            <form id = "search_form" class = "col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                    <input placeholder="Placeholder" name = "search" id="search" type="text" class="validate">
                     <label for="search">Search</label>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
+    </div>
+    <div id = "search-results" class = "container">
+        
+    </div>
 
         <div class="search-btn">
             <button onclick="searchAnime();getanimequote()" class= "search-btn" id="search-btn">Search</button>

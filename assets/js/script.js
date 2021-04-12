@@ -1,75 +1,78 @@
 const base_url = "https://api.jikan.moe/v3";
 
-function searchAnime() {
-  const query = document.getElementById("search").value;
-  console.log(query);
 
-  fetch(`${base_url}/search/anime?q=${query}&page=1`)
-    .then(response=>response.json())
+function searchAnime(event){
+
+    event.preventDefault();
+
+    const form = new FormData(this);
+    const query = form.get("search");
+
+
+    
+    fetch(`${base_url}/search/anime?q=${query}&page=1`)
+    .then(res=>res.json())
     .then(updateDom)
-    .catch(err=>console.e(err.message));
+    .catch(err=>console.log(err.message));
 }
-
 function updateDom(data){
-    data.results.forEach(anime=>console.log(anime));
+
+    const searchResults = document.getElementById('search-results');
+
+    
+    const animeByCategories = data.results
+    /* This will be organising the anime by category */
+    .reduce((acc,anime)=>{
+
+        const {type} = anime;
+        if(acc[type] === undefined) acc[type] = [];
+        acc[type].push(anime);
+        return acc;
+
+
+
+    }, {});
+    /* Each key will be creating a 'row' */
+    searchResults.innerHTML = Object.keys(animeByCategories).map(key=>{
+
+        const animeHTML = animeByCategories[key]
+        /* This will organise the data by episodes, to make it easier to sift through the data */
+        .sort((a,b)=>a.episodes-b.episodes)
+        /* This function will be fetching the data from the search and placing them into the cards */
+        .map(anime=>{
+            return `
+              <div class="card">
+                <div class="card-image">
+                  <img src="${anime.image_url}">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">${anime.title}</span>
+                    <p>${anime.synopsis}</p>
+                </div>
+                <div class="card-action">
+                  <a href="${anime.url}">More Info</a>
+                </div>
+              </div>
+            `
+        }).join("");
+
+        /* This function will display the categories, for example, TV, Movie, ETC */
+        return `
+            <section>
+                <h3>${key.toUpperCase()}</h3>
+                <div class ="row">${animeHTML}</div>
+            </section>
+        `
+    }).join("");
+     
+}
+function pageLoaded(){
+   const form = document.getElementById('search_form');
+   form.addEventListener("submit", searchAnime);
 }
 
 
-
-// function pageLoaded(){
-//     const form = document.getElementById('search_btn');
-//     form.addEventListener("submit", searchAnime);
-// }
-/*
-function searchAnime(query) {
-    fetch("https://api.jikan.moe/v3/search/anime?q=" + query)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(err => {
-        console.error(err);
-    });
-}
-
-searchAnime("gundam");
-*/
-//
-
-    // fetch("https://hummingbirdv1.p.rapidapi.com/anime", {
-    //  headers: {
-    //     "x-rapidapi-key": "5a5ee65267msh299c16e466936b0p1a0102jsn2f9566139b24",
-    //      	"x-rapidapi-host": "hummingbirdv1.p.rapidapi.com",
-    //          "useQueryString": true,
-    //          "mode": 'no-cors'
-    //  }
-    // })
-    //     .then(function (result) {
-    //         console.log(result);
-    //         return result.json()
-    //     }).then(function(data)
-    //     {
-    //         console.log(data)
-    //     })
-    //     .catch(function (err) {
-    //         console.log(err);
-    //     });
-// });
-
-// var unirest = require("unirest");
-
-// var req = unirest("GET", "https://hummingbirdv1.p.rapidapi.com/anime/steins-gate");
-
-// req.headers({
-// 	"x-rapidapi-key": "5a5ee65267msh299c16e466936b0p1a0102jsn2f9566139b24",
-// 	"x-rapidapi-host": "hummingbirdv1.p.rapidapi.com",
-// 	"useQueryString": true
-// });
-
-
-// req.end(function (res) {
-// 	if (res.error) throw new Error(res.error);
-
-// 	console.log(res.body);
-// });
+window.addEventListener("load", pageLoaded)
 function getanimequote(){
     const query = document.getElementById("search").value;
 
