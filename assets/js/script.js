@@ -70,4 +70,11 @@ searchAnime("gundam");
 
 // 	console.log(res.body);
 // });
+function getanimequote(){
+    const query = document.getElementById("search").value;
 
+fetch('https://animechan.vercel.app/api/quotes/anime?title='+query)
+.then(response => response.json())
+.then(quotes => console.log(quotes[1].quote)
+)
+}
