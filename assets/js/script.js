@@ -1,6 +1,8 @@
 const base_url = "https://api.jikan.moe/v3";
+let searchInput = ".search-btn";
 
 
+searchInput.addEventListener('click', searchAnime);
 function searchAnime(event){
 
     event.preventDefault();
