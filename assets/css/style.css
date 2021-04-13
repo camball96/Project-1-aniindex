@@ -111,3 +111,8 @@ img {
     top: -100px;
   }
 }
+#randomquote{
+  width: 60%;
+  text-align: center;
+  display: flex;
+}
