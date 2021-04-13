@@ -19,6 +19,7 @@ html {
 }
 
 body { 
+  background-color: grey;
   background-image: url('/assets/images/create-anime-background-style.jpg');
   background-position: center;
   background-repeat: no-repeat;
