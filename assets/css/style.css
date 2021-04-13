@@ -45,6 +45,16 @@ h1 {
 
 }
 
+.container {
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBtn {
+  padding: 10px;
+  
+}
+
 
 .search-btn-container {
   justify-content: center;
