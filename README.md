@@ -1,15 +1,15 @@
-#Group project 1
+# Group project 1
 
 To create a web application that uses 2 API’s
 
-##Contents of Project
+## Contents of Project
 
 This project contains an index.html file, script.js file, style.css file and a image folder consisting of any images/png’s used in our project.
 Goals for Project
 We wanted to build a web application that would successfully fetch Anime information from what a user has search on our app via API and return information matching our request. 
 
 
-##The Acceptance Criteria
+## The Acceptance Criteria
 
 The Acceptance Criteria are as follows;
 * Use a CSS framework other than Bootstrap.
