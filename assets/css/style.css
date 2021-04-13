@@ -1,6 +1,6 @@
 :root {
   --darkGrey: rgb(37, 33, 33);
-  --green: green;
+  --green:black;
 }
 
 html,
@@ -21,7 +21,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--darkGrey);
+  background-image: url('/assets/images/create-anime-background-style.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: fill;
   color: var(--green);
 }
 
