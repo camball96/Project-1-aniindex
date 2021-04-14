@@ -1,4 +1,3 @@
-![Screenshot 2021-04-14 10 04 50](https://user-images.githubusercontent.com/78600025/114635816-ead41980-9d08-11eb-8d93-e20b3371feca.png)
 # Group project 1
 
 To create a web application that uses 2 API’s
@@ -50,6 +49,8 @@ We found that a few of the API’s we were originally using were expired which m
 We can, in the future, add in another API that will allow the user to not only see information and a quote from the searched anime, but also watch the episode on our site. This will allow the user to read and watch their favourite anime on one website. 
 We could also create our site to be a social hub for anyone who loves Anime to post thoughts, reviews and questions on the anime that they watched and interacted with.
 Besides the changes mentioned above, an update on the css style could also increase UI experience.
+
+![Screenshot 2021-04-14 10 04 50](https://user-images.githubusercontent.com/78600025/114635816-ead41980-9d08-11eb-8d93-e20b3371feca.png)
 
 
 
