@@ -1,3 +1,4 @@
+![Screenshot 2021-04-14 10 04 50](https://user-images.githubusercontent.com/78600025/114635816-ead41980-9d08-11eb-8d93-e20b3371feca.png)
 # Group project 1
 
 To create a web application that uses 2 API’s
